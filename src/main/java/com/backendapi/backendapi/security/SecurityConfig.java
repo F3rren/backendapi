@@ -1,5 +1,6 @@
-package com.backendapi.security;
+package com.backendapi.backendapi.security;
 
+import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.HttpMethod;
@@ -10,8 +11,15 @@ import org.springframework.security.config.http.SessionCreationPolicy;
 import org.springframework.security.web.SecurityFilterChain;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 
-import lombok.RequiredArgsConstructor;
+import com.backendapi.backendapi.security.filter.CustomAuthenticationFilter;
+import com.backendapi.backendapi.security.filter.CustomAuthorizationFilter;
 
+/**
+ * Created by Vincenzo Racca
+ * versions the same or later than Spring Boot 2.7.0.
+ * If you use Spring Boot 2, replace jakarta package with jakarta package and
+ * requestMatchers method with antMatchers method
+ */
 @Configuration
 @RequiredArgsConstructor
 public class SecurityConfig {
@@ -39,4 +47,5 @@ public class SecurityConfig {
 
         return http.build();
     }
+
 }

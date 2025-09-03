@@ -9,9 +9,10 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 
-import com.backendapi.model.entity.RoleEntity;
-import com.backendapi.model.entity.UserEntity;
-import com.backendapi.service.UserServiceImpl;
+import com.backendapi.backendapi.model.entity.RoleEntity;
+import com.backendapi.backendapi.model.entity.UserEntity;
+import com.backendapi.backendapi.service.RoleService;
+import com.backendapi.backendapi.service.UserService;
 
 @SpringBootApplication
 public class BackendapiApplication {
@@ -34,11 +35,11 @@ public class BackendapiApplication {
 			roleService.save(new RoleEntity(null, "ROLE_USER"));
 			roleService.save(new RoleEntity(null, "ROLE_ADMIN"));
 
-			userService.save(new UserEntity(null, "rossi", "password", new ArrayList<>()));
-			userService.save(new UserEntity(null, "bianchi", "password", new ArrayList<>()));
+			userService.save(new UserEntity(null, "rossi", "1234", new ArrayList<>()));
+			userService.save(new UserEntity(null, "bianchi", "1234", new ArrayList<>()));
 
 			userService.addRoleToUser("rossi", "ROLE_USER");
-			userService.addRoleToUser("rossi", "ROLE_ADMIN");
+			userService.addRoleToUser("bianchi", "ROLE_ADMIN");
 			userService.addRoleToUser("bianchi", "ROLE_USER");
 
 		};

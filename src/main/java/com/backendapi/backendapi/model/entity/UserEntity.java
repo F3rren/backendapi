@@ -1,4 +1,4 @@
-package com.backendapi.model.entity;
+package com.backendapi.backendapi.model.entity;
 
 import java.io.Serializable;
 import java.util.ArrayList;
