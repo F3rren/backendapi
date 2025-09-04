@@ -78,12 +78,23 @@ public class CustomAuthenticationFilter extends UsernamePasswordAuthenticationFi
     @Override
     protected void successfulAuthentication(HttpServletRequest request, HttpServletResponse response, FilterChain chain,
                                             Authentication authentication) throws IOException, ServletException {
-        User user = (User)authentication.getPrincipal();
-        String accessToken = JwtUtil.createAccessToken(user.getUsername(), request.getRequestURL().toString(),
-                user.getAuthorities().stream().map(GrantedAuthority::getAuthority).collect(Collectors.toList()));
+        User user = (User) authentication.getPrincipal();
+        String accessToken = JwtUtil.createAccessToken(
+                user.getUsername(),
+                request.getRequestURL().toString(),
+                user.getAuthorities().stream().map(GrantedAuthority::getAuthority).collect(Collectors.toList())
+        );
         String refreshToken = JwtUtil.createRefreshToken(user.getUsername());
-        response.addHeader("ACCESS_TOKEN", accessToken);
-        response.addHeader("REFRESH_TOKEN", refreshToken);
+
+        // Costruisci la risposta JSON personalizzata
+        Map<String, Object> responseBody = new HashMap<>();
+        responseBody.put("username", user.getUsername());
+        responseBody.put("roles", user.getAuthorities().stream().map(GrantedAuthority::getAuthority).collect(Collectors.toList()));
+        responseBody.put("accessToken", accessToken);
+        responseBody.put("refreshToken", refreshToken);
+
+        response.setContentType(APPLICATION_JSON_VALUE);
+        new ObjectMapper().writeValue(response.getOutputStream(), responseBody);
     }
 
     @Override
@@ -91,7 +102,7 @@ public class CustomAuthenticationFilter extends UsernamePasswordAuthenticationFi
         response.setStatus(HttpServletResponse.SC_UNAUTHORIZED);
         ObjectMapper mapper = new ObjectMapper();
         Map<String, String> error = new HashMap<>();
-        error.put("errorMessage", "Bad credentials");
+        error.put("errorMessage", "Credenziali errate. Riprovare");
         response.setContentType(APPLICATION_JSON_VALUE);
         mapper.writeValue(response.getOutputStream(), error);
     }
