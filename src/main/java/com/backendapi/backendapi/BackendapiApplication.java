@@ -1,3 +1,12 @@
+/**
+ * Classe principale che avvia l'applicazione Spring Boot.
+ * Qui parte l'esecuzione del backend.
+ * Puoi aggiungere configurazioni globali o bean personalizzati.
+ *
+ * Per estendere:
+ * - Aggiungi metodi con annotazione @Bean per configurazioni globali.
+ * - Integra logiche di avvio personalizzate nel metodo main.
+ */
 package com.backendapi.backendapi;
 
 import java.util.ArrayList;

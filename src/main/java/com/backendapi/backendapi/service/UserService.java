@@ -1,3 +1,10 @@
+/**
+ * Interfaccia che definisce i metodi di business per la gestione degli utenti.
+ * Puoi aggiungere nuovi metodi per logiche di business aggiuntive.
+ *
+ * Per estendere:
+ * - Aggiungi metodi per nuove funzionalità (es: reset password, gestione profili).
+ */
 package com.backendapi.backendapi.service;
 
 import java.text.ParseException;

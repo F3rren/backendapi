@@ -1,3 +1,14 @@
+
+/**
+ * Configurazione della sicurezza Spring Security.
+ * Qui imposti le regole di accesso agli endpoint, i filtri di autenticazione/autorizzazione, ecc.
+ * Puoi aggiungere nuove regole, endpoint pubblici, o integrare provider di autenticazione esterni.
+ *
+ * Per estendere:
+ * - Aggiungi nuove regole nei metodi authorizeHttpRequests.
+ * - Integra nuovi filtri personalizzati.
+ * - Modifica la gestione delle sessioni o dei token JWT.
+ */
 package com.backendapi.backendapi.security;
 
 import lombok.RequiredArgsConstructor;
@@ -14,12 +25,6 @@ import org.springframework.security.web.authentication.UsernamePasswordAuthentic
 import com.backendapi.backendapi.security.filter.CustomAuthenticationFilter;
 import com.backendapi.backendapi.security.filter.CustomAuthorizationFilter;
 
-/**
- * Created by Vincenzo Racca
- * versions the same or later than Spring Boot 2.7.0.
- * If you use Spring Boot 2, replace jakarta package with jakarta package and
- * requestMatchers method with antMatchers method
- */
 @Configuration
 @RequiredArgsConstructor
 public class SecurityConfig {

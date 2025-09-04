@@ -1,3 +1,12 @@
+/**
+ * Controller REST che espone le API per la gestione degli utenti.
+ * Qui definisci gli endpoint (es: GET, POST, PUT, DELETE) per operare sugli utenti.
+ * Puoi aggiungere nuovi endpoint per altre funzionalità (es: ricerca utenti, cambio password).
+ *
+ * Per estendere:
+ * - Aggiungi nuovi metodi per endpoint personalizzati.
+ * - Integra validazioni o logiche di business aggiuntive.
+ */
 package com.backendapi.backendapi.api;
 
 

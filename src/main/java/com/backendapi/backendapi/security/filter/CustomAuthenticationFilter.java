@@ -1,3 +1,11 @@
+/**
+ * Filtro personalizzato per la fase di autenticazione (login).
+ * Puoi modificare la logica di login, aggiungere controlli o logging personalizzato.
+ *
+ * Per estendere:
+ * - Modifica la logica di autenticazione.
+ * - Aggiungi controlli extra (es: captcha, logging, limiti tentativi).
+ */
 package com.backendapi.backendapi.security.filter;
 
 import com.backendapi.backendapi.util.JwtUtil;

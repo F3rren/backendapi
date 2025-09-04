@@ -1,3 +1,11 @@
+/**
+ * Classe di utilità per la gestione dei token JWT (creazione, validazione, parsing).
+ * Puoi estendere la logica per includere nuovi claim o algoritmi di firma.
+ *
+ * Per estendere:
+ * - Aggiungi nuovi metodi per claim personalizzati.
+ * - Cambia algoritmo di firma o parametri di validazione.
+ */
 package com.backendapi.backendapi.util;
 
 import com.nimbusds.jose.*;

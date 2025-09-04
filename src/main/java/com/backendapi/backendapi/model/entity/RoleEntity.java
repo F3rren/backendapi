@@ -1,3 +1,12 @@
+/**
+ * Entità JPA che rappresenta la tabella 'role' nel database.
+ * Qui definisci i campi che corrispondono alle colonne del DB.
+ * Puoi aggiungere nuovi campi o relazioni con altre entità.
+ *
+ * Per estendere:
+ * - Aggiungi nuovi campi o relazioni.
+ * - Aggiorna le migration del database.
+ */
 package com.backendapi.backendapi.model.entity;
 
 import java.io.Serializable;

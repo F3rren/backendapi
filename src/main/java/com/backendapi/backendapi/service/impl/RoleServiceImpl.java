@@ -1,3 +1,11 @@
+/**
+ * Implementazione della logica di business per la gestione dei ruoli.
+ * Qui scrivi la logica effettiva dei metodi dichiarati in RoleService.
+ *
+ * Per estendere:
+ * - Aggiungi nuove logiche di business o modifica quelle esistenti.
+ * - Integra servizi esterni o logiche di validazione avanzate.
+ */
 package com.backendapi.backendapi.service.impl;
 
 import lombok.RequiredArgsConstructor;

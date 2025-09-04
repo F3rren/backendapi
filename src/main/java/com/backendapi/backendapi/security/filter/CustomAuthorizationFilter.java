@@ -1,3 +1,11 @@
+/**
+ * Filtro personalizzato per la fase di autorizzazione (controllo permessi).
+ * Puoi personalizzare la gestione dei token JWT o aggiungere logiche di autorizzazione avanzate.
+ *
+ * Per estendere:
+ * - Modifica la logica di validazione dei token.
+ * - Aggiungi controlli su ruoli/permessi specifici.
+ */
 package com.backendapi.backendapi.security.filter;
 
 import com.backendapi.backendapi.util.JwtUtil;
@@ -19,10 +27,7 @@ import static org.springframework.http.HttpHeaders.AUTHORIZATION;
 import static org.springframework.http.HttpStatus.FORBIDDEN;
 import static org.springframework.util.MimeTypeUtils.APPLICATION_JSON_VALUE;
 
-/**
- * Created by Vincenzo Racca
- * If you use Spring Boot 2, replace jakarta package with jakarta package
- */
+
 @Slf4j
 public class CustomAuthorizationFilter extends OncePerRequestFilter {
     @Override

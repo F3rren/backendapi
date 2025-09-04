@@ -1,3 +1,12 @@
+/**
+ * Entità JPA che rappresenta la tabella 'user' nel database.
+ * Qui definisci i campi che corrispondono alle colonne del DB.
+ * Puoi aggiungere nuovi campi (es: email, data di nascita) e aggiornare il DB di conseguenza.
+ *
+ * Per estendere:
+ * - Aggiungi nuovi campi e aggiorna le migration del database.
+ * - Integra relazioni con altre entità.
+ */
 package com.backendapi.backendapi.model.entity;
 
 import java.io.Serializable;

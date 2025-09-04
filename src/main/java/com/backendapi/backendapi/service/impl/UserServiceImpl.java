@@ -1,3 +1,11 @@
+/**
+ * Implementazione della logica di business per la gestione degli utenti.
+ * Qui scrivi la logica effettiva dei metodi dichiarati in UserService.
+ *
+ * Per estendere:
+ * - Aggiungi nuove logiche di business o modifica quelle esistenti.
+ * - Integra servizi esterni o logiche di validazione avanzate.
+ */
 package com.backendapi.backendapi.service.impl;
 
 import java.text.ParseException;
